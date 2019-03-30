@@ -1,0 +1,36 @@
+1. Import (nhập) CSDL mẫu (export)
+- kiểm tra tên CSDL
+vietpro_mobile_shop
+- tạo 1 CSDL mới trùng tên mới CSDL mẫu
+
+2. Mối quan hệ giữa các bảng trong CSDL
+a. 1-1
+1 trường bên table A có quan hệ chỉ 1 và 1 với trường bên table B và ngược lại
+
+b. 1-n
+VD: category vs product
+	1 		->      n
+	1		<-		1
+	1				n
+->  khóa chính bên bảng 1 (cat_id) là khóa phụ/ngoại (foreign key) bên bảng nhiều
+
+VD: user vs comment
+	1 		->      n
+	1		<-		1
+	1				n
+
+VD: product vs comment
+	1 		->      n
+	1		<-		1
+	1				n
+
+c. n-n = 1-n + n-1
+VD: sinhvien vs monthi
+
+3. Kết nối giữa php (website) với mysql (csdl)
+Hệ quản trị CSDL mysql: có 3 thư viện (mysql php5, mysqli php7, pdo 7.->)
+* Cách viết hàm:
+mysqli_function();
+- thư viện kết nối là config, file kết nối trong config là connect.php
+
+* list package gợi ý code:
